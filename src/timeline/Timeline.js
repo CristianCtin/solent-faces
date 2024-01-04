@@ -1,11 +1,12 @@
 import React from 'react';
 import "./Timeline.css";
 import Sugesstions from './Sugesstions';
-import Post from './posts/Post';
+import Post from "./posts/Post";
 
 
 function Timeline() {
-  return <div className='timeline'>
+  return (
+    <div className='timeline'>
     <div className='timeline__left'>
       <div className='timeline__posts'>
         <Post />
@@ -18,6 +19,7 @@ function Timeline() {
     <div className='timeline__right'></div>
     <Sugesstions />
   </div>
+  );
   
 }
 
