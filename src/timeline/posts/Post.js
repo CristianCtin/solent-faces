@@ -7,14 +7,14 @@ import ChatBubbleOutlineIcon  from '@mui/icons-material/ChatBubbleOutline';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import BookmarkBorder  from '@mui/icons-material/BookmarkBorder';
 
-function Post() {
+function Post({user, postImage, likes, timestamp}) {
   return (
     
     <div className='post'>
         <div className='post_header'>
             <div className='post__headerAuthor'>
-            <Avatar>C</Avatar>
-           Cristian_ • <span>12h</span>
+            <Avatar>{user.charAt(0).toUpperCase()}</Avatar>
+           {user} • <span>{timestamp}</span>
 
             </div>
 
@@ -22,7 +22,10 @@ function Post() {
            
         </div>
         <div className='post_image'>
-            <img src="https://studyabroadlife.org/wp-content/uploads/2021/04/Solent-University.jpg"></img>
+            <img 
+            src={postImage}
+            alt=""
+            />
         </div>
         <div className='post_footer'>
           <div className='post__footerIcons'>
@@ -37,7 +40,7 @@ function Post() {
             <BookmarkBorder className='postIcon'/>
 
           </div>
-          Liked by 11 people
+          Liked by {likes} people
 
 
         </div>
