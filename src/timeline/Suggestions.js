@@ -52,7 +52,7 @@ function Sugesstions() {
             <Avatar></Avatar>
           </span>
           <div className='username__info'>
-            <span className='username'>Solent_Uni</span>
+            <span className='username'>Solent_Uny</span>
             <span className='relation'>New to Solent Faces</span>
           </div>
         </div>  
