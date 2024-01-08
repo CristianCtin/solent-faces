@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import "./Timeline.css";
-import Sugesstions from './Sugesstions';
+import Suggestions from './Suggestions';
 import Post from "./posts/Post";
 
 
 
 function Timeline() {
+
   const[posts, setPosts] = useState([
     {
       user: 'Cristian_',
@@ -31,28 +32,31 @@ function Timeline() {
       likes: 7,
       timestamp: "2h",
     },
-
+   
+  
   ]);
+ 
   return (
-    <div className='timeline'>
-    <div className='timeline__left'>
-      <div className='timeline__posts'>
-        {posts.map((post) => (
-          <Post 
-          user={post.user} 
-          postImage={post.postImage} 
-          likes={post.likes} 
-          timestamp={post.timestamp} 
-          />
-        ))}
 
+  
+    <div className="timeline">
+      <div className="timeline__left">
+        <div className="timeline__posts">
+          {posts.map((post) => (
+            <Post
+              user={post.user}
+              postImage={post.postImage}
+              likes={post.likes}
+              timestamp={post.timestamp}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="timeline__right">
+        <Suggestions />
       </div>
     </div>
-    <div className='timeline__right'></div>
-    <Sugesstions />
-  </div>
   );
-  
 }
 
 export default Timeline
