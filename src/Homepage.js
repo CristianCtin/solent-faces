@@ -6,7 +6,7 @@ import Timeline from './timeline/Timeline';
 function Homepage() {
   return (
     <div className='homepage'>
-      <div className='homepage_nav'>
+      <div className='homepage_navWrapper'>
         <Sidenav />
 
       </div>
@@ -15,7 +15,7 @@ function Homepage() {
 
       </div>
     </div>
-  )
+  );
 }
 
 export default Homepage
