@@ -29,18 +29,27 @@ function Signup() {
   return (
     <div className='signup'>
         <img src="https://th.bing.com/th/id/OIG2.w9e8UQZHNWXevhzLNIoV?pid=ImgGn" alt="" />
-        <input onChange={e => setEmail(e.target.value)} type="email" placeholder="Email"
-        value={email}/>
-        
-        <input onChange={e => setUsername(e.target.value)}type="text" placeholder="Username"
-        value={username}/>
-
-        <input onChange={e => setPassword(e.target.value)}type="password" placeholder="Password"
-        value={password}/>
-
-        <button>Sign Up</button>
+        <input
+        onChange={(e) => setEmail(e.target.value)}
+        type="email"
+        placeholder="Email"
+        value={email}
+      />
+      <input
+        onChange={(e) => setUsername(e.target.value)}
+        type="email"
+        placeholder="Username"
+        value={username}
+      />
+      <input
+        onChange={(e) => setPassword(e.target.value)}
+        type="password"
+        placeholder="Password"
+        value={password}
+      />
+      <button onClick={handleSignUp}>Sign up</button>
     </div>
-  )
+  );
 }
 
-export default Signup
+export default Signup;
